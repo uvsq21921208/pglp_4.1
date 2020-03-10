@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * 
  * @author Mouttie Classe personnel.
  */
-public final class Personnel {
+public final class Personnel implements PersonnelInterface{
 	/**
 	 * Le nom d'un personnel.
 	 */
@@ -76,6 +76,27 @@ public final class Personnel {
 		this.prenom = builder.prenom;
 		this.fonction = builder.fonction;
 	}
-
+	/**
+	 *Print implementation.
+	 * @return 
+	 */
+	public void print() {
+		System.out.println("Nom "+nom+"Prenom "+prenom+" Fonction"+fonction);
+	}
+	public String getNom() {
+		return nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public ArrayList<String> getTelephones() {
+		return telephones;
+	}
+	public LocalDate getDataDeNaissance() {
+		return dataDeNaissance;
+	}
+	public String getFonction() {
+		return fonction;
+	}
 
 }
